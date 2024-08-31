@@ -45,7 +45,6 @@ texture = ExtResource("1_fvc7s")
 3:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 3:2/0/physics_layer_0/angular_velocity = 0.0
 3:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-3:2/0/physics_layer_0/polygon_0/one_way = true
 4:2/0 = 0
 4:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 4:2/0/physics_layer_0/angular_velocity = 0.0
@@ -53,7 +52,6 @@ texture = ExtResource("1_fvc7s")
 5:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 5:2/0/physics_layer_0/angular_velocity = 0.0
 5:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-5:2/0/physics_layer_0/polygon_0/one_way = true
 11:2/0 = 0
 11:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 11:2/0/physics_layer_0/angular_velocity = 0.0
@@ -381,6 +379,8 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_p2b25"]
+radius = 8.0
+height = 18.0
 
 [node name="World-01" type="Node2D"]
 
@@ -421,5 +421,5 @@ animation = &"Idle"
 autoplay = "Idle"
 
 [node name="Collision" type="CollisionShape2D" parent="Player"]
-position = Vector2(0, 3)
+position = Vector2(0, 8)
 shape = SubResource("CapsuleShape2D_p2b25")
