@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://ywecwrc4k8i0"]
+
+[ext_resource type="Script" path="res://Scripts/moving_platform.gd" id="1_lflyo"]
+[ext_resource type="Texture2D" uid="uid://dicok5g5pwofx" path="res://assets/Seasonal Tilesets/5 - Misc. universal tiles/Blocks (16 x 16).png" id="1_unubv"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1cvby"]
+size = Vector2(32, 16)
+
+[node name="moving_platform" type="Node2D"]
+script = ExtResource("1_lflyo")
+
+[node name="platform" type="AnimatableBody2D" parent="."]
+collision_layer = 2
+
+[node name="Sprite_platform" type="Sprite2D" parent="platform"]
+texture = ExtResource("1_unubv")
+region_enabled = true
+region_rect = Rect2(96, 64, 32, 16)
+
+[node name="Collsion" type="CollisionShape2D" parent="platform"]
+shape = SubResource("RectangleShape2D_1cvby")
+one_way_collision = true
